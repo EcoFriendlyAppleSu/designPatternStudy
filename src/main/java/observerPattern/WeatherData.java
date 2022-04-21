@@ -13,6 +13,14 @@ public class WeatherData implements Subject{
     private float humidity;
     private float pressure;
 
+    public float getTemperature() {
+        return temperature;
+    }
+
+    public float getHumidity() {
+        return humidity;
+    }
+
     public WeatherData() {
         observers = new ArrayList<Observer>();
     }
@@ -27,11 +35,15 @@ public class WeatherData implements Subject{
         observers.remove(o);
     }
 
+
+    /**
+     * change push strategy to pull strategy
+     */
     @Override
     public void notifyObserver() {
         for (Observer observer :
                 observers) {
-            observer.update(temperature, humidity, humidity);
+            observer.update();
         }
     }
 

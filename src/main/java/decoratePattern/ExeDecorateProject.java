@@ -31,7 +31,7 @@ public class ExeDecorateProject {
         beverage3 = new Soy(beverage3);
         beverage3 = new Soy(beverage3);
         beverage3 = new Mocha(beverage3);
-        
+
         System.out.println("음료 이름 = " + beverage3.getDescription()
                 + " 가격 = " + beverage3.cost()
         );

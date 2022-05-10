@@ -1,12 +1,16 @@
 package adaptorPattern.SimpleDuckProject;
 
+
+/**
+ * 어댑터 패턴은 호환되지 않는 것을 호환 가능하게 만들어주는 것
+ */
 public class ExeSimpleDuckProject {
 
     public static void main(String[] args) {
         Duck duck = new MallardDuck();
 
         Turkey turkey = new WildTurkey();
-        Duck turkeyAdapter = new TurkeyAdapter(turkey); // Upcasting 가능
+        Duck turkeyAdapter = new TurkeyAdapter(turkey);
 
         System.out.println("칠면조가 말하길");
         turkey.gobble();

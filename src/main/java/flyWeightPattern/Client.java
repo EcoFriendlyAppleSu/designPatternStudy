@@ -2,25 +2,11 @@ package flyWeightPattern;
 
 public class Client {
     public static void main(String[] args) {
-        String[] colors = {"red", "blue", "green", "white"};
+        // == 아이스크림 회사
+        String[] colors = {"red", "blue", "green", "white", "yellow"};
 
-
-
-        long startWithoutPattern = System.nanoTime();
-
-        for (int i = 0; i < 10; i++) {
-            Circle circle = new Circle(colors[(int) (Math.random() * 4)]);
-            circle.setX((int)(Math.random() * 10));
-            circle.setY((int)(Math.random() * 10));
-            circle.setRadius((int)(Math.random() * 10));
-            circle.draw();
-        }
-
-        long endWithoutPattern = System.nanoTime();
-
-        System.out.println();
-        System.out.println(" FlyWeight Pattern 적용하지 않을 시 걸리는 시간 = " + (endWithoutPattern - startWithoutPattern));
-
+        // 싱글턴 -> 가변
+        // 불변
         long startApplyPattern = System.nanoTime();
 
         for (int i = 0; i < 10; i++) {
@@ -36,6 +22,7 @@ public class Client {
         System.out.println();
         System.out.println(" FlyWeight Pattern 적용 시 걸리는 시간 = " + (endApplyPattern - startApplyPattern));
         System.out.println();
+
 
     }
 }

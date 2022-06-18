@@ -1,14 +1,12 @@
 package strategyPattern.sorting;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 
-public class BubbleSorting implements Sorting{
+public class BubbleSortingEnt implements SortingEnt {
     @Override
     public void executeSorting(int[] ary) {
-        System.out.println("Hello Im BubbleSorting" + ary.length);
+        System.out.println("Bubble sorting is running");
         bubbleSort(ary, ary.length);
         System.out.println(Arrays.toString(ary));
     }

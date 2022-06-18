@@ -1,13 +1,11 @@
 package strategyPattern.sorting;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-public class SelectionSorting implements Sorting{
+public class SelectionSortingEnt implements SortingEnt {
     @Override
     public void executeSorting(int[] ary) {
-        System.out.println("Hello Im SelectSorting");
+        System.out.println("Selection sorting is running");
         selectSort(ary, ary.length);
         System.out.println(Arrays.toString(ary));
     }
